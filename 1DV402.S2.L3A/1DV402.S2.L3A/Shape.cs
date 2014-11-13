@@ -14,13 +14,9 @@ namespace _1DV402.S2.L3A
         private double _width;
 
         //Egenskaper
-        public abstract double Area 
+        public abstract double Area
         {
-            get
-            { 
-                double area = _length * Width;
-                return area;
-            }
+            get;
         }
         public double Length
         {
@@ -29,42 +25,31 @@ namespace _1DV402.S2.L3A
 
             set
             {
-                if (_length > 0)
-                {
-                    _length = value;
-                }
-                else
+                if (value <= 0)
                 {
                     throw new ArgumentException("_length måste vara mer än 0");
+                   
                 }
+                _length = value;
             }
         }
         public abstract double Perimeter
         {
-            get
-            {
-                double result = (_length * 2) + (_width * 2);
-                return result;
-            }
+            get;
         }
         public double Width
         {
             get
-            {
-                return _width;
-            }
+            { return _width; }
 
             set
             {
 
-                if (_width > 0)
-                {
-                    _length = value;
-                }
-                else
+                if (value <= 0)
                 {
                     throw new ArgumentException("_width måste vara mer än 0");
                 }
+                _width = value; 
             }
         }
 
@@ -79,10 +64,10 @@ namespace _1DV402.S2.L3A
         public override string ToString()
         {
 
-            string toString = "Längd  :     " + Length + "/n" +
-                              "Bredd  :     " + Width + "/n" +
-                              "Omrekts:     " + Perimeter + "/n" +
-                              "Area   :     " + Area;
+            string toString = "\nLängd  :     " + Length + "\n" +
+                              "Bredd  :     " + Width + "\n" +
+                              "Omrekts:     " + Perimeter + "\n" +
+                              "Area   :     " + Area + "\n";
             return toString;
         }
     }

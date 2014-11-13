@@ -11,19 +11,22 @@ namespace _1DV402.S2.L3A
 
         public override double Area
         {
-            get { throw new NotImplementedException(); }
+            get { 
+            return Math.PI * (Length/2) * (Width/2);
+                }
         }
 
         public override double Perimeter
         {
-            get { throw new NotImplementedException(); }
+            get { 
+          
+                return Math.PI * Math.Sqrt(2 * (Length/2) * (Length/2) + 2 * (Width/2) * (Width/2));
+                }
         }
 
         public Ellipse(double length, double width)
-            : base(0, 0)
+            : base(length, width)
         {
-            Length = length;
-             Width = width;
         }
     }
 }

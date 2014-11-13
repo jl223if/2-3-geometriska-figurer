@@ -11,19 +11,17 @@ namespace _1DV402.S2.L3A
 
         public override double Area
         {
-            get { throw new NotImplementedException(); }
+            get { return Length * Width; }
         }
 
         public override double Perimeter
         {
-            get { throw new NotImplementedException(); }
+            get { return Length * 2 + Width * 2; }
         }
 
         public Rectangle(double length, double width)
-            : base(0, 0)    
-        {
-            Length = length;
-            Width = width;
+            : base(length, width)    
+        {        
         }
     }
 }
